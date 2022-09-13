@@ -19,18 +19,6 @@ const Story = () => {
   };
 
 
-  // useEffect(()=>{
-  //   if(running){
-  //     interval = setInterval(() => {
-  //       setProgress((prev) => prev + 1)
-  //     }, 100)
-  //   } else{
-  //     clearInterval(interval)
-  //   }
-
-  //   return () => clearInterval(interval);
-  // }, [running])
-
 
   useEffect(() => {
     const interval = setInterval(() => {
