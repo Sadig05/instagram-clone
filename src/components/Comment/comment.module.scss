@@ -1,0 +1,32 @@
+.comment{
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+}
+
+.inputComment{
+    padding: 8px 12px 8px 0;
+    width: 100%;
+
+    textarea{
+    font-family: "Roboto";
+    background: none;
+    padding: 0  0 0 30px;
+    border: none;
+    color: rgb(38, 38, 38);
+    display: flex;
+    flex-grow: 1;
+    font-size: inherit;
+    height: 30px;
+    max-height: 80px;
+    outline: none;
+    padding: 0;
+    resize: none;
+    width: 100%;
+    overflow: auto;
+    }
+
+    textarea::-webkit-scrollbar {
+        display: none;
+      }
+}

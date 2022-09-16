@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&family=Lobster&family=Poppins&family=Raleway&family=Roboto&display=swap');
+
+.mainContainer{
+    // width: 85%;
+    font-family: "Roboto";
+    background-color: #efefef;
+    height: 100vh;
+}
+
+.headerBorder{
+    border-bottom: 1px solid rgb(219, 219, 219);
+    margin: 0 0 15px 0;
+    background-color: #fff;
+}
+
+.homeContainer{
+    // display: grid;
+    // grid-template-columns: auto auto auto;
+    // grid-template-rows: auto auto auto;
+    display: flex;
+    width: 45%;
+    margin: 0 auto;
+   
+    
+}
+
+.rightSide{
+    flex-basis: 75%;
+    margin: 0 40px 0  0;
+}
+
+
+.storySection{
+    display: flex;
+    flex-basis: 50%;
+    height: 125px;
+    gap: 20px;
+    padding: 10px 0 10px 10px;
+    background-color: #fff;
+  
+   
+    // grid-column-start: 1;
+    // grid-column-end: 3;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 8px;
+    overflow-x: scroll;
+    background-color: red($color: #000000);
+}
+
+.storySection::-webkit-scrollbar {
+    display: none;
+  }
+
+.sideBar{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1/-1;
+    
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

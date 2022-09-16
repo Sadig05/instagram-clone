@@ -1,0 +1,120 @@
+.story-owner{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  p{
+    font-size: 14px;
+  }
+}
+
+.story {
+  display: inline-block;
+
+  background: 
+  linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
+  linear-gradient(to right, darkblue, darkorchid) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--btn-font-size, 1em);
+  color: var(--color-contrast-medium);
+  padding: var(--space-xs) var(--space-md);
+  cursor: pointer;
+  transition: color .2s;
+
+
+
+  img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
+
+  div{
+    background-image: url("https://picsum.photos/id/237/200/300");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: contain;
+    background-position: center;
+  }
+}
+.active {
+    border-radius: 50%;
+    border: 3px solid red;
+
+    // $border: 5px;
+    // color: #FFF;
+    // // background: #000;
+    // background-clip: padding-box; /* !importanté */
+    // border: solid $border transparent; /* !importanté */
+    // border-radius: 50%;
+  
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0; right: 0; bottom: 0; left: 0;
+    //   z-index: -1;
+    //   margin: -$border; /* !importanté */
+    //   border-radius: inherit; /* !importanté */
+    //   background: linear-gradient(to right, red, orange);
+    // }
+}
+
+.myModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img{
+        width: 350px;
+    }
+
+    .storyContext{
+      position: relative;
+
+      .outter{
+        position: absolute;
+        top: 8px;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        opacity: 50%;
+        overflow: hidden;
+        .inner{
+          width: 0;
+          height: 3px;
+          background-color: grey;
+        }
+      }
+
+      .owner{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 20px; 
+        left: 10px;
+        gap: 15px;
+
+        img{
+          border: 2px solid gray;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+        }
+
+        span{
+          font-size: 16px;
+          color: white;
+        }
+      }
+    }
+}
+
+
+
+
+

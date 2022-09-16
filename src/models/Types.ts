@@ -11,15 +11,26 @@ n_following: number;
 n_posts: number;
 }
 
-export interface IPost{
-    id: number;
-    content: string;
-    post_owner: string;
-    post_date: Date;
-    post_likes: number;
-    post_comments: string[];
-}
+// export interface IPost{
+//     id: number;
+//     content: string;
+//     post_owner: string;
+//     post_date: Date;
+//     post_likes: number;
+//     post_comments: string[];
+// }
 
 export interface IName{
     username: string;
+}
+
+export interface IComment{
+    name: string;
+    comment: string;
+}
+
+export interface IPost{
+    name: string;
+    url: string;
+    caption: string;
 }

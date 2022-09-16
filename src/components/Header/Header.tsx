@@ -1,29 +1,38 @@
 import React from "react";
 import home from "../../assets/home.svg";
-import "./_header.scss";
+import style from "./header.module.scss";
 import { FaHome, FaInstagramSquare, FaFacebookMessenger } from "react-icons/fa";
 import { CgAdd } from "react-icons/cg";
 import { MdOutlineExplore } from "react-icons/md";
-import { AiOutlineHeart , AiOutlineSearch} from "react-icons/ai";
+import { AiOutlineHeart, AiOutlineSearch } from "react-icons/ai";
 import { BiUserCircle } from "react-icons/bi";
+import { useStore } from "../../stores/RootStore";
 const Header = () => {
+  const { userStore } = useStore();
+
   return (
-    <section className="container">
-      <div className="header-container" >
+    <section>
+      <div className={style["headerContainer"]}>
         <div>
-          <FaInstagramSquare className="ig-logo" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+            className={style["igLogo"]}
+          />
         </div>
-        <div className="search">
+        <div className={style["search"]}>
           <input type="text" placeholder="Search" />
-          <AiOutlineSearch className="search-logo"/>
+          <AiOutlineSearch className={style["searchLogo"]} />
         </div>
-        <div className="header-icons">
-          <FaHome className="header-icon" />
-          <FaFacebookMessenger className="header-icon" />
-          <CgAdd className="header-icon" />
-          <MdOutlineExplore className="header-icon" />
-          <AiOutlineHeart className="header-icon" />
-          <BiUserCircle className="header-icon" />
+        <div className={style["headerIcons"]}>
+          <FaHome className={style["headerIcon"]} />
+          <FaFacebookMessenger className={style["headerIcon"]} />
+          <CgAdd
+            onClick={userStore.openPostModal}
+            className={style["headerIcon"]}
+          />
+          <MdOutlineExplore className={style["headerIcon"]} />
+          <AiOutlineHeart className={style["headerIcon"]} />
+          <BiUserCircle className={style["headerIcon"]} />
         </div>
       </div>
     </section>
